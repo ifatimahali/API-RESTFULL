@@ -25,7 +25,11 @@ async function imageList(){
         let divImage = document.createElement("div")
         let img = document.createElement("img")
         img.src = e.src;
+        let btn = document.createElement("button")
+        btn.innerText = "delete";
+        btn.setAttribute("onclick", `DeleteI(${e.id})`)
         divImage.append(img)
+         divImage.append(btn)
 
         document.getElementById("all").append(divImage);
         // body.append(divImage)
@@ -34,31 +38,18 @@ async function imageList(){
 }
 imageList()
 
-async function DeleteI(){
-    let res = await fetch("https://6657369a9f970b3b36c86599.mockapi.io/API/" + id,
+async function DeleteI(id){
+    fetch("https://6657369a9f970b3b36c86599.mockapi.io/API/" + id,
     {
-        method: 'DELETE',
-        body : JSON.stringify({
-        }),
-        headers:{
-            'Content-type': 'application/json; charset = UTF-8'
-        },
-    })
-    data.forEach(e => {
-        let but = document.createElement("button")
-        divImage.append(but)
-        divImage.append(img)
-        console.log(img)
+        method: 'DELETE'
+    }).then((response) => response.json())
+    .then((json) => location.reload());
 
-
-        document.getElementById("all").append(divImage);
-        // body.append(divImage)
-
-    })
+    // location.reload()
 }
 
 
 
-
+// imageList()
 
 
