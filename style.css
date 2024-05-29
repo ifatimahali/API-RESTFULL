@@ -1,14 +1,25 @@
-.all{
-    display: grid;
- 
-}
+
 img{
-    width: 140px;
-    height: 140px;
+    width: 50vw;
+    height: 50vh;
     bottom: 10px;
     border: 2px solid black;
 }
 
 button{
-    
+    background-color: rgb(213, 209, 209);
+    color:black;
+    font-size: 3rem;
+    text-align: center;
+}
+div{
+    display: grid;
+    grid-template-rows: 1fr ;
+    justify-content: center;
+    margin:0;
+    padding:10px
+ 
+}
+.bt{
+    font-size: 1rem;
 }
