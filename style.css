@@ -1,0 +1,10 @@
+.all{
+    display: grid;
+ 
+}
+img{
+    width: 140px;
+    height: 140px;
+    bottom: 10px;
+    border: 2px solid black;
+}
